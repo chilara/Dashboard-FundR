@@ -1,72 +1,40 @@
 "use client";
 // import React from "react";
-import { useEffect, useState, useMemo } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Box, Text, Flex, Input } from "@chakra-ui/react";
 import Chevrondown from "../../app/assets/chevrondown.svg";
 import Calendar from "../../app/assets/calendar.svg";
-import Pagination from "@mui/material/Pagination";
-import TablePagination from "@mui/material/TablePagination";
 import Upload from "../../app/assets/upload.svg";
-
-export interface IPadginationProps {
-  page?: number;
-  rowsPerPage?: number;
-}
-
-export function TablePaginationDemo({
-  page,
-  count,
-  rowsPerPage,
-  padginate,
-}: {
-  page: number;
-  count: number;
-  rowsPerPage: number;
-  padginate: (change: IPadginationProps) => void;
-}) {
-  const handleChangePage = (
-    event: React.ChangeEvent<unknown>,
-    newPage: number
-  ) => {
-    padginate({ page: newPage });
-  };
-
-  const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    padginate({
-      page: 0,
-      rowsPerPage: parseInt(event.target.value, 10),
-    });
-  };
-
-  return (
-    <Pagination
-      shape="rounded"
-      count={count}
-      page={page}
-      onChange={handleChangePage}
-    />
-  );
-}
+import ArrowL from "../../app/assets/arrowL.svg";
+import ArrowR from "../../app/assets/arrowR.svg";
 
 const DesktopTransactionComp = () => {
-  const [allUsersList, setUsersList] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [data, setData] = useState([]);
+  const [dataCount, setDataCount] = useState(0);
+  const [completeData, setCompleteData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      let data = [];
       try {
         setLoading(true);
-        const res = await fetch("/accounts.json");
-        data = await res.json();
-        if (!data) {
-          alert("An error occurred while fetching users...");
-          return;
+        if (pageNumber === 1) {
+          const res = await fetch("/accounts.json");
+          const data_ = await res.json();
+          setCompleteData(data_);
+          setDataCount(data_.length);
+
+          if (!data_) {
+            alert("An error occurred while fetching users...");
+            return;
+          }
+          setData(data_.slice(1, 11)); // here I selected the first 10 data and set data to it
+        } else {
+          const endingValue = pageNumber * 10 + 1;
+          setData(completeData.slice(endingValue - 10, endingValue));
         }
-        setUsersList(data);
+
         return;
       } catch (err) {
         alert("An error occurred while fetching users...");
@@ -75,36 +43,9 @@ const DesktopTransactionComp = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [pageNumber]);
 
-  const [padginationProps, setPadginationProps] = useState({
-    page: 1,
-    rowsPerPage: 10,
-  });
-
-  const padginate = (change: IPadginationProps) => {
-    setPadginationProps((prev) => ({ ...prev, ...change }));
-  };
-
-  useEffect(() => {
-    padginate({
-      page: allUsersList.length,
-    });
-  }, [allUsersList]);
-
-  const { page, rowsPerPage } = padginationProps;
-  const count = Math.ceil(allUsersList.length / rowsPerPage);
-
-  // const usersList = useMemo(() => {
-  //   return allUsersList.slice(page - 1, rowsPerPage);
-  // }, [allUsersList]);
-
-  const startIndex = (page - 1) * rowsPerPage;
-  const endIndex = startIndex + rowsPerPage;
-  const usersList = useMemo(
-    () => allUsersList.slice(startIndex, endIndex),
-    [allUsersList, startIndex, endIndex]
-  );
+  const numberOfPages = Math.ceil(dataCount / 10);
 
   return (
     <Box mt={"7rem"}>
@@ -274,13 +215,13 @@ const DesktopTransactionComp = () => {
         px={"1.5rem"}
         borderRadius={"6px"}
         height={"fit-content"}
-        mb={"20rem"}
+        mb={"2rem"}
       >
         {loading ? (
           <Text>Loading...</Text>
         ) : (
-          usersList &&
-          usersList.map(
+          data &&
+          data.map(
             (
               item: {
                 amount: string;
@@ -394,14 +335,61 @@ const DesktopTransactionComp = () => {
         )}
       </Box>
 
-      <div className="w-full flex justify-center items-center">
-        <TablePaginationDemo
-          count={count}
-          page={page}
-          rowsPerPage={rowsPerPage}
-          padginate={padginate}
-        />
-      </div>
+      <Box display={"flex"} justifyContent={"flex-end"} gap={".5rem"}>
+        <button
+          style={{
+            width: "32px",
+            height: "32px",
+            border: "4px",
+            borderRadius: "1px solid #1F62FF",
+            backgroundColor: "#fff",
+            marginBottom: " 20rem",
+          }}
+          onClick={() => {
+            setPageNumber(pageNumber - 1);
+          }}
+          disabled={pageNumber === 1}
+        >
+          <ArrowL />
+        </button>
+        {new Array(numberOfPages).fill("go").map((item, index) => (
+          <button
+            key={index}
+            style={{
+              backgroundColor: "#fff",
+              color: "#535379",
+              fontWeight: "400",
+              width: "32px",
+              height: "32px",
+              border:
+                pageNumber === index + 1 ? "1px solid #1F62FF" : "#DADAE7",
+              borderRadius: "4px",
+              fontSize: "14px",
+              textAlign: "center",
+            }}
+            onClick={() => {
+              setPageNumber(index + 1);
+            }}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <button
+          style={{
+            width: "32px",
+            height: "32px",
+            border: "4px",
+            borderRadius: "1px solid #1F62FF",
+            backgroundColor: "#fff",
+          }}
+          onClick={() => {
+            setPageNumber(pageNumber + 1);
+          }}
+          disabled={pageNumber === numberOfPages}
+        >
+          <ArrowR />
+        </button>
+      </Box>
     </Box>
   );
 };

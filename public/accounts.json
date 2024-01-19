@@ -494,5 +494,17 @@
     "border": "1px solid #5DC090",
     "color": "#740613",
     "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦33,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
   }
 ]
