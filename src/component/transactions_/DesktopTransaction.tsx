@@ -1,14 +1,58 @@
 "use client";
 // import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { Box, Text, Flex, Input } from "@chakra-ui/react";
 import Chevrondown from "../../app/assets/chevrondown.svg";
 import Calendar from "../../app/assets/calendar.svg";
+import Pagination from "@mui/material/Pagination";
+import TablePagination from "@mui/material/TablePagination";
 import Upload from "../../app/assets/upload.svg";
 
+export interface IPadginationProps {
+  page?: number;
+  rowsPerPage?: number;
+}
+
+export function TablePaginationDemo({
+  page,
+  count,
+  rowsPerPage,
+  padginate,
+}: {
+  page: number;
+  count: number;
+  rowsPerPage: number;
+  padginate: (change: IPadginationProps) => void;
+}) {
+  const handleChangePage = (
+    event: React.ChangeEvent<unknown>,
+    newPage: number
+  ) => {
+    padginate({ page: newPage });
+  };
+
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    padginate({
+      page: 0,
+      rowsPerPage: parseInt(event.target.value, 10),
+    });
+  };
+
+  return (
+    <Pagination
+      shape="rounded"
+      count={count}
+      page={page}
+      onChange={handleChangePage}
+    />
+  );
+}
+
 const DesktopTransactionComp = () => {
-  const [usersList, setUsersList] = useState([]);
+  const [allUsersList, setUsersList] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -33,8 +77,37 @@ const DesktopTransactionComp = () => {
     fetchData();
   }, []);
 
+  const [padginationProps, setPadginationProps] = useState({
+    page: 1,
+    rowsPerPage: 10,
+  });
+
+  const padginate = (change: IPadginationProps) => {
+    setPadginationProps((prev) => ({ ...prev, ...change }));
+  };
+
+  useEffect(() => {
+    padginate({
+      page: allUsersList.length,
+    });
+  }, [allUsersList]);
+
+  const { page, rowsPerPage } = padginationProps;
+  const count = Math.ceil(allUsersList.length / rowsPerPage);
+
+  // const usersList = useMemo(() => {
+  //   return allUsersList.slice(page - 1, rowsPerPage);
+  // }, [allUsersList]);
+
+  const startIndex = (page - 1) * rowsPerPage;
+  const endIndex = startIndex + rowsPerPage;
+  const usersList = useMemo(
+    () => allUsersList.slice(startIndex, endIndex),
+    [allUsersList, startIndex, endIndex]
+  );
+
   return (
-    <Box px={"5rem"} mt={"7rem"}>
+    <Box mt={"7rem"}>
       <Box
         display={"flex"}
         alignItems={"center"}
@@ -43,7 +116,6 @@ const DesktopTransactionComp = () => {
         mt={"5rem"}
         borderBottom={"1px solid var(--Border-bd-dark, #DADAE7)"}
         padding={"18px 16px 12px 16px"}
-        px={"13rem"}
       >
         <Box
           display={"flex"}
@@ -321,6 +393,15 @@ const DesktopTransactionComp = () => {
           )
         )}
       </Box>
+
+      <div className="w-full flex justify-center items-center">
+        <TablePaginationDemo
+          count={count}
+          page={page}
+          rowsPerPage={rowsPerPage}
+          padginate={padginate}
+        />
+      </div>
     </Box>
   );
 };

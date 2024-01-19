@@ -39,9 +39,9 @@ const MobileSidebarComp = () => {
   return (
     <Box
       height={"945px"}
-      padding={"32px 0px 591px 0px"}
+      // padding={"32px 0px 591px 0px"}
       borderRight={"1px solid #E6EAEE"}
-      position={"fixed"}
+      // position={"fixed"}
       mt={"5.7rem"}
     >
       {/* {sidebarContent?.map((item, index) => (

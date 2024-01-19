@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <Box display={"flex"} justifyContent={"space-between"}>
+        <Box display={"flex"} gap={"17rem"} backgroundColor={"#fafafa"}>
           <Sidebar />
           <Box backgroundColor={"#fafafa"}>{children}</Box>
         </Box>

@@ -13,7 +13,7 @@ const TransactionIndex = () => {
     query: "(min-width: 360px) and (max-width: 1224px)",
   });
   return (
-    <Box backgroundColor={"#fafafa"}>
+    <Box backgroundColor={"#fafafa"} width={"1100px"} px={"3rem"}>
       {isDesktopOrLaptop && <DesktopTransactionComp />}
       {isMobile && <MobileTransactionComp />}
     </Box>

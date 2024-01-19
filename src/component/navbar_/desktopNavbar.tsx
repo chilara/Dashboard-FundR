@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import Image from "next/image";
 import Logo from "../../app/assets/Logo.svg";
 import Notification from "../../app/assets/notification.svg";
 import ArrowDown from "../../app/assets/arrowDown.svg";

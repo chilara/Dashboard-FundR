@@ -46,6 +46,192 @@
     "status": "Failed",
     "bgColor": "#FEECEE",
     "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦30,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#740613",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦32,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦36,644",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+
+  {
+    "amount": "₦33,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦38,644",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#740613",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦34,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦37,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#740613",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦35,471",
+    "id": "TR_8401857902",
+    "type": "Withdrawal",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦35,644",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+
+  {
+    "amount": "₦39,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦30,644",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦43,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦37,624",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+
+  {
+    "amount": "₦38,654",
+    "id": "TR_8401857902",
+    "type": "Deposit",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+
+  {
+    "amount": "₦31,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
 
     "color": "#144909",
     "dotColor": "#F14156"
@@ -184,6 +370,129 @@
     "bgColor": "#EFFDED",
     "border": "1px solid #5DC090",
     "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦39,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦43,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦37,624",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+
+  {
+    "amount": "₦38,654",
+    "id": "TR_8401857902",
+    "type": "Deposit",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+
+  {
+    "amount": "₦31,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦30,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#740613",
+    "dotColor": "#92EF80"
+  },
+  {
+    "amount": "₦32,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦36,644",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#144909",
+    "dotColor": "#92EF80"
+  },
+
+  {
+    "amount": "₦33,644",
+    "id": "TR_8401857902",
+    "type": "Transfer",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "failed",
+    "bgColor": "#FEECEE",
+    "border": "1px solid #F14156",
+    "color": "#740613",
+    "dotColor": "#F14156"
+  },
+  {
+    "amount": "₦38,644",
+    "id": "TR_8401857902",
+    "type": "Request",
+    "date": "feb,12 2022",
+    "time": "10:30am",
+    "status": "Processed",
+    "bgColor": "#EFFDED",
+    "border": "1px solid #5DC090",
+    "color": "#740613",
     "dotColor": "#92EF80"
   }
 ]

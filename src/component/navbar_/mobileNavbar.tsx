@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import Logo from "../../app/assets/Logo.svg";
-import notification from "../../app/assets/notification.svg";
-import toggle from "../../app/assets/toggle.svg";
+import Notification from "../../app/assets/notification.svg";
+import Toggle from "../../app/assets/toggle.svg";
 import MobileSidebarComp from "../sidebar_/mobileSidebar";
 
 const MobileNavbarComp = () => {
@@ -19,27 +19,28 @@ const MobileNavbarComp = () => {
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
-      padding={"20px 16px"}
-      px="8rem"
+      padding={"24px 16px"}
+      px="2rem"
       borderBottom={"1px solid #E6EAEE"}
-      mt={"3rem"}
       position={"fixed"}
       top={0}
       left={0}
       right={0}
+      backgroundColor={"#fff"}
+      zIndex={10}
     >
       <Button onClick={toggler} border={"none"} backgroundColor={"transparent"}>
-        <Image src={toggle} alt="toggle" width={44} height={44} />
+        <Toggle />
       </Button>
 
-      <Image src={Logo} alt="logo" width={200} height={64} />
+      <Logo />
       <Box
         display={"flex"}
         alignItems={"center"}
         justifyContent={"space-between"}
         gap={"1rem"}
       >
-        <Image src={notification} alt="notification" width={44} height={44} />
+        <Notification />
         <Box
           display={"flex"}
           alignItems={"center"}
