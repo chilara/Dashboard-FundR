@@ -36,31 +36,13 @@ const MobileTransactionComp = () => {
   }, []);
 
   return (
-    <Box mt={"7rem"} px={"2rem"}>
-      {/* <Box>
-        <Box display={"flex"} alignItems={"center"} gap={"2rem"}>
-          <ArrowLeft />
-          <Text
-            color={"#000"}
-            fontSize={"15px"}
-            fontWeight={600}
-            fontStyle={"normal"}
-            lineHeight={"150%"}
-          >
-            Transactions
-          </Text>
-        </Box>
-      </Box> */}
-
+    <Box mt={"8rem"} px={"1rem"}>
       <Box
         display={"flex"}
         alignItems={"center"}
         justifyContent={"space-between"}
         gap={"2rem"}
         mt={"5rem"}
-        borderBottom={"1px solid var(--Border-bd-dark, #DADAE7)"}
-        // padding={"18px 16px 12px 16px"}
-        // px={"13rem"}
       >
         <Box
           display={"flex"}
@@ -81,146 +63,76 @@ const MobileTransactionComp = () => {
         <Box
           display={"flex"}
           alignItems={"center"}
-          gap={"1rem"}
           justifyContent={"space-between"}
+          gap={"1rem"}
+          padding={"1px 20px"}
+          backgroundColor={"#fff"}
+          borderRadius={"8px"}
+          border={"1px solid var(--Border-bd-dark, #DADAE7)"}
         >
+          <Upload />
           <Text
-            color={"#71717a"}
-            fontSize={"16px"}
+            color={"#344054"}
+            fontSize={"14px"}
             fontWeight={500}
             fontStyle={"normal"}
-            lineHeight={"normal"}
+            lineHeight={"22px"}
           >
-            Select Date Range:
+            Export
           </Text>
-          <Box
-            display={"flex"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            gap={"1rem"}
-            padding={"1px 20px"}
-            backgroundColor={"#fff"}
-            borderRadius={"8px"}
-            border={"1px solid var(--Border-bd-dark, #DADAE7)"}
-          >
-            <Calendar />
-            <Text
-              color={"#71717a"}
-              fontSize={"14px"}
-              fontWeight={500}
-              fontStyle={"normal"}
-              lineHeight={"22px"}
-            >
-              June 6, 2023 - Jun 15, 2023
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            gap={"1rem"}
-            padding={"1px 20px"}
-            backgroundColor={"#fff"}
-            borderRadius={"8px"}
-            border={"1px solid var(--Border-bd-dark, #DADAE7)"}
-          >
-            <Upload />
-            <Text
-              color={"#344054"}
-              fontSize={"14px"}
-              fontWeight={500}
-              fontStyle={"normal"}
-              lineHeight={"22px"}
-            >
-              Export
-            </Text>
-          </Box>
         </Box>
       </Box>
       <Box
-        mt={"4rem"}
         display={"flex"}
-        justifyContent={"space-between"}
         alignItems={"center"}
-        px={"1.5rem"}
-      >
-        <Input type="checkbox"></Input>
-        <Text
-          color={"#84919A"}
-          fontSize={"12px"}
-          fontWeight={600}
-          fontStyle={"normal"}
-          lineHeight={"16px"}
-          textTransform={"uppercase"}
-          ml={"-1.5rem"}
-        >
-          amount
-        </Text>
-        <Text
-          color={"#84919A"}
-          fontSize={"12px"}
-          fontWeight={600}
-          fontStyle={"normal"}
-          lineHeight={"16px"}
-          textTransform={"uppercase"}
-          ml={"-1.5rem"}
-        >
-          transaction id
-        </Text>
-        <Text
-          color={"#84919A"}
-          fontSize={"12px"}
-          fontWeight={600}
-          fontStyle={"normal"}
-          lineHeight={"16px"}
-          textTransform={"uppercase"}
-          ml={"-2rem"}
-        >
-          transaction type
-        </Text>
-        <Text
-          color={"#84919A"}
-          fontSize={"12px"}
-          fontWeight={600}
-          fontStyle={"normal"}
-          lineHeight={"16px"}
-          textTransform={"uppercase"}
-        >
-          date
-        </Text>
-        <Text
-          color={"#84919A"}
-          fontSize={"12px"}
-          fontWeight={600}
-          fontStyle={"normal"}
-          lineHeight={"16px"}
-          textTransform={"uppercase"}
-          mr={"1rem"}
-        >
-          time
-        </Text>
-        <Text
-          color={"#84919A"}
-          fontSize={"12px"}
-          fontWeight={600}
-          fontStyle={"normal"}
-          lineHeight={"16px"}
-          textTransform={"uppercase"}
-          mr={"3rem"}
-        >
-          status
-        </Text>
-      </Box>
-      <Box
-        border={" 1px solid #E4E4E7"}
-        background={"#fff"}
+        gap={"1rem"}
+        justifyContent={"space-between"}
         mt={"1rem"}
-        padding={"0 24px 24px 24px 24px"}
-        px={"1.5rem"}
-        borderRadius={"6px"}
-        height={"fit-content"}
-        mb={"20rem"}
       >
+        <Text
+          color={"#71717a"}
+          fontSize={"16px"}
+          fontWeight={500}
+          fontStyle={"normal"}
+          lineHeight={"normal"}
+        >
+          Select Date Range:
+        </Text>
+        <Box
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          gap={"1rem"}
+          padding={"1px 20px"}
+          backgroundColor={"#fff"}
+          borderRadius={"8px"}
+          border={"1px solid var(--Border-bd-dark, #DADAE7)"}
+        >
+          <Calendar />
+          <Text
+            color={"#71717a"}
+            fontSize={"14px"}
+            fontWeight={500}
+            fontStyle={"normal"}
+            lineHeight={"22px"}
+          >
+            June 6, 2023 - Jun 15, 2023
+          </Text>
+        </Box>
+      </Box>
+
+      <Text
+        color={"#535379"}
+        fontSize={"17px"}
+        fontWeight={600}
+        fontStyle={"normal"}
+        lineHeight={"150%"}
+        textTransform={"capitalize"}
+        mt={"3rem"}
+      >
+        Transactions
+      </Text>
+      <Box display={"flex"} flexDirection={"column"} justifyContent={"center"}>
         {loading ? (
           <Text>Loading...</Text>
         ) : (
@@ -229,7 +141,6 @@ const MobileTransactionComp = () => {
             (
               item: {
                 amount: string;
-                id: number;
                 type: string;
                 date: string;
                 time: string;
@@ -242,111 +153,124 @@ const MobileTransactionComp = () => {
               index: number
             ) => (
               <Box
+                mt={"3rem"}
+                position={"relative"}
+                width={"95%"}
+                border={" 1px solid #E4E4E7"}
+                backgroundColor={"#fff"}
+                borderRadius={"5px"}
+                padding={"18px 24px"}
                 key={index}
-                display={"flex"}
-                justifyContent={"space-between"}
-                alignItems={"center"}
-                mt={0}
-                boxShadow={"0px 1px 0px 0px #EDEDF2"}
               >
-                <Input type="checkbox"></Input>
-                <Text
-                  color={"#000505"}
-                  fontSize={"12px"}
-                  fontWeight={400}
-                  fontStyle={"normal"}
-                  lineHeight={"22px"}
-                  textTransform={"uppercase"}
-                  textAlign={"center"}
-                  padding={"20px"}
-                >
-                  {item.amount}
-                </Text>
-                <Text
-                  color={"#535379"}
-                  fontSize={"12px"}
-                  fontWeight={400}
-                  fontStyle={"normal"}
-                  lineHeight={"22px"}
-                  textTransform={"uppercase"}
-                  padding={"20px"}
-                >
-                  {item.id}
-                </Text>
-                <Text
-                  color={"#535379"}
-                  fontSize={"12px"}
-                  fontWeight={400}
-                  fontStyle={"normal"}
-                  lineHeight={"22px"}
-                  textTransform={"uppercase"}
-                  padding={"20px"}
-                >
-                  {item.type}
-                </Text>
-                <Text
-                  color={"#535379"}
-                  fontSize={"12px"}
-                  fontWeight={400}
-                  fontStyle={"normal"}
-                  lineHeight={"22px"}
-                  textTransform={"uppercase"}
-                  padding={"20px"}
-                >
-                  {item.date}
-                </Text>
-                <Text
-                  color={"#535379"}
-                  fontSize={"12px"}
-                  fontWeight={400}
-                  fontStyle={"normal"}
-                  lineHeight={"22px"}
-                  textTransform={"uppercase"}
-                  padding={"20px"}
-                >
-                  {item.time}
-                </Text>
-
-                <Box
-                  color={item.color}
-                  fontSize={"12px"}
-                  fontWeight={400}
-                  fontStyle={"normal"}
-                  lineHeight={"22px"}
-                  textTransform={"capitalize"}
-                  backgroundColor={item.bgColor}
-                  padding={"4px 12px"}
-                  border={item.border}
-                  borderRadius={"100px"}
-                  width={"100px"}
-                  textAlign={"center"}
-                  display={"flex"}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  gap={".5rem"}
-                >
+                <Box display={"flex"} justifyContent={"space-between"}>
+                  <Text
+                    color={"#535379"}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"uppercase"}
+                  >
+                    Amount
+                  </Text>
+                  <Text
+                    color={"#535379"}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"uppercase"}
+                  >
+                    {item.amount}
+                  </Text>
+                </Box>
+                <Box display={"flex"} justifyContent={"space-between"}>
+                  <Text
+                    color={"#535379"}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"uppercase"}
+                  >
+                    Transaction Type
+                  </Text>
+                  <Text
+                    color={"#535379"}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"uppercase"}
+                  >
+                    {item.type}
+                  </Text>
+                </Box>
+                <Box display={"flex"} justifyContent={"space-between"}>
+                  <Text
+                    color={"#535379"}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"uppercase"}
+                  >
+                    Date
+                  </Text>
+                  <Text
+                    color={"#535379"}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"uppercase"}
+                  >
+                    {item.date}, <span>{item.time}</span>
+                  </Text>
+                </Box>
+                <Box display={"flex"} justifyContent={"space-between"}>
+                  <Text
+                    color={"#535379"}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"uppercase"}
+                  >
+                    Status
+                  </Text>
                   <Box
-                    width={"8px"}
-                    height={"8px"}
-                    borderRadius={"50%"}
-                    backgroundColor={item.dotColor}
-                  ></Box>
-                  {item.status}
+                    color={item.color}
+                    fontSize={"12px"}
+                    fontWeight={400}
+                    fontStyle={"normal"}
+                    lineHeight={"22px"}
+                    textTransform={"capitalize"}
+                    backgroundColor={item.bgColor}
+                    padding={"4px 12px"}
+                    border={item.border}
+                    borderRadius={"100px"}
+                    width={"100px"}
+                    textAlign={"center"}
+                    display={"flex"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                    gap={".5rem"}
+                  >
+                    <Box
+                      width={"8px"}
+                      height={"8px"}
+                      borderRadius={"50%"}
+                      backgroundColor={item.dotColor}
+                    ></Box>
+                    {item.status}
+                  </Box>
                 </Box>
               </Box>
             )
           )
         )}
       </Box>
-
-      {/* <div className="w-full flex justify-center items-center">
-        <TablePaginationDemo
-          count={count}
-          page={page}
-          rowsPerPage={rowsPerPage}
-          padginate={padginate}
-        />
-      </div> */}
     </Box>
   );
 };

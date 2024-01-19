@@ -37,8 +37,7 @@ export const months = [
 
 const MobileDashboardComp = () => {
   return (
-    <Box padding={"32px 0px 945px 0px"} mt={"2rem"} px={"2rem"}>
-      {/* <Box px={"2rem"} width={"100%"}> */}
+    <Box mt={"8rem"} px={"1rem"}>
       <Box>
         <Text
           mt={"3.5rem"}
@@ -50,8 +49,6 @@ const MobileDashboardComp = () => {
           lineHeight={"148.187%"}
           borderBottom={"2px solid #3976E8"}
           width={"45%"}
-          // position={"absolute"}
-          // top={74}
         >
           Online Payment
         </Text>

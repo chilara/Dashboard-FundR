@@ -29,7 +29,7 @@ const DesktopTransactionComp = () => {
             alert("An error occurred while fetching users...");
             return;
           }
-          setData(data_.slice(1, 11)); // here I selected the first 10 data and set data to it
+          setData(data_.slice(0, 10)); // here I selected the first 10 data and set data to it
         } else {
           const endingValue = pageNumber * 10 + 1;
           setData(completeData.slice(endingValue - 10, endingValue));
@@ -45,7 +45,12 @@ const DesktopTransactionComp = () => {
     fetchData();
   }, [pageNumber]);
 
-  const numberOfPages = Math.ceil(dataCount / 10);
+  let numberOfPages;
+  if (dataCount % 10 !== 0) {
+    numberOfPages = Math.ceil(dataCount / 10);
+  } else {
+    numberOfPages = dataCount / 10;
+  }
 
   return (
     <Box mt={"7rem"}>
@@ -344,6 +349,7 @@ const DesktopTransactionComp = () => {
             borderRadius: "1px solid #1F62FF",
             backgroundColor: "#fff",
             marginBottom: " 20rem",
+            cursor: "pointer",
           }}
           onClick={() => {
             setPageNumber(pageNumber - 1);
@@ -352,6 +358,7 @@ const DesktopTransactionComp = () => {
         >
           <ArrowL />
         </button>
+
         {new Array(numberOfPages).fill("go").map((item, index) => (
           <button
             key={index}
@@ -361,6 +368,7 @@ const DesktopTransactionComp = () => {
               fontWeight: "400",
               width: "32px",
               height: "32px",
+              cursor: "pointer",
               border:
                 pageNumber === index + 1 ? "1px solid #1F62FF" : "#DADAE7",
               borderRadius: "4px",
@@ -380,6 +388,7 @@ const DesktopTransactionComp = () => {
             height: "32px",
             border: "4px",
             borderRadius: "1px solid #1F62FF",
+            cursor: "pointer",
             backgroundColor: "#fff",
           }}
           onClick={() => {
