@@ -36,7 +36,7 @@ const MobileTransactionComp = () => {
   }, []);
 
   return (
-    <Box mt={"8rem"} px={"5px"} className="w-full">
+    <Box mt={"8rem"} className="w-full">
       <Box
         display={"flex"}
         alignItems={"center"}
@@ -51,7 +51,7 @@ const MobileTransactionComp = () => {
         >
           <Text
             color={"#2e2e2e"}
-            fontSize={"16px"}
+            fontSize={"14px"}
             fontWeight={500}
             fontStyle={"normal"}
             lineHeight={"22px"}
@@ -73,7 +73,7 @@ const MobileTransactionComp = () => {
           <Upload />
           <Text
             color={"#344054"}
-            fontSize={"14px"}
+            fontSize={"12px"}
             fontWeight={500}
             fontStyle={"normal"}
             lineHeight={"22px"}
@@ -91,7 +91,7 @@ const MobileTransactionComp = () => {
       >
         <Text
           color={"#71717a"}
-          fontSize={"16px"}
+          fontSize={"14px"}
           fontWeight={500}
           fontStyle={"normal"}
           lineHeight={"normal"}
@@ -111,7 +111,7 @@ const MobileTransactionComp = () => {
           <Calendar />
           <Text
             color={"#71717a"}
-            fontSize={"14px"}
+            fontSize={"12px"}
             fontWeight={500}
             fontStyle={"normal"}
             lineHeight={"22px"}
@@ -132,7 +132,12 @@ const MobileTransactionComp = () => {
       >
         Transactions
       </Text>
-      <Box display={"flex"} flexDirection={"column"} justifyContent={"center"}>
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        justifyContent={"center"}
+        mb={"3rem"}
+      >
         {loading ? (
           <Text>Loading...</Text>
         ) : (
@@ -153,13 +158,13 @@ const MobileTransactionComp = () => {
               index: number
             ) => (
               <Box
-                mt={"3rem"}
+                mt={"1rem"}
                 position={"relative"}
-                width={"95%"}
+                width={"88%"}
                 border={" 1px solid #E4E4E7"}
                 backgroundColor={"#fff"}
                 borderRadius={"5px"}
-                padding={"18px 24px"}
+                padding={"18px"}
                 key={index}
               >
                 <Box display={"flex"} justifyContent={"space-between"}>

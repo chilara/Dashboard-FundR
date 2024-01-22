@@ -84,8 +84,6 @@ const DesktopSidebarComp = () => {
             >
               <item.icon color={index === 4 || 1 ? "#fff" : ""} />
 
-              {/* <item.icon color={index === 4 || index === 1 ? "#fff" : ""} /> */}
-
               <Text
                 color={"#04004D"}
                 fontSize={"15px"}

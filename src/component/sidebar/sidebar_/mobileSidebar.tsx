@@ -43,37 +43,7 @@ const MobileSidebarComp = () => {
       borderRight={"1px solid #E6EAEE"}
       // position={"fixed"}
       mt={"5.7rem"}
-    >
-      {/* {sidebarContent?.map((item, index) => (
-        <Box
-          key={index}
-          display={"flex"}
-          px={"4rem"}
-          alignItems={"center"}
-          gap={"1rem"}
-          cursor={"pointer"}
-          _hover={{
-            transform: "scale(1.02)",
-            bg: "#3976E8",
-            color: "#fff",
-          }}
-        >
-          <Image src={item.icon} alt="icon" width={24} height={24} />
-          <Text
-            color={"#04004D"}
-            fontSize={"15px"}
-            fontWeight={400}
-            fontStyle={"normal"}
-            lineHeight={"150%"}
-            _hover={{
-              color: "#fff",
-            }}
-          >
-            {item.content}
-          </Text>
-        </Box>
-      ))} */}
-    </Box>
+    ></Box>
   );
 };
 
