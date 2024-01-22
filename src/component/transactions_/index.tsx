@@ -6,14 +6,24 @@ import DesktopTransactionComp from "./DesktopTransaction";
 import MobileTransactionComp from "./mobileTransaction";
 
 const TransactionIndex = () => {
+  // const isDesktopOrLaptop = useMediaQuery({
+  //   query: "(min-width: 800px)",
+  // });
+
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 1224px)",
   });
   const isMobile = useMediaQuery({
     query: "(min-width: 360px) and (max-width: 1224px)",
   });
+
   return (
-    <Box backgroundColor={"#fafafa"} width={"1150px"} px={"3rem"}>
+    <Box backgroundColor={"#fafafa"} px={"3rem"}>
+      {/* {isDesktopOrLaptop ? (
+        <DesktopTransactionComp />
+      ) : (
+        <MobileTransactionComp />
+      )} */}
       {isDesktopOrLaptop && <DesktopTransactionComp />}
       {isMobile && <MobileTransactionComp />}
     </Box>

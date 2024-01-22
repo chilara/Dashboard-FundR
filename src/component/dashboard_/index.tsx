@@ -2,7 +2,6 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import DashboardComp from "./DesktopDashboard";
 import DesktopDashboardComp from "./DesktopDashboard";
 import MobileDashboardComp from "./mobileDashboard";
 
@@ -13,6 +12,7 @@ const DashboardIndex = () => {
   const isMobile = useMediaQuery({
     query: "(min-width: 360px) and (max-width: 1224px)",
   });
+
   return (
     <Box>
       {isDesktopOrLaptop && <DesktopDashboardComp />}

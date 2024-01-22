@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import "../setupTests";
 import "./globals.css";
 import { Box, Button, Text } from "@chakra-ui/react";
-import Navbar from "./navbar/page";
-import Sidebar from "./sidebar/page";
+import Navbar from "../component/navbar/page";
+import Sidebar from "../component/sidebar/page";
 
 const inter = Inter({ subsets: ["latin"] });
 

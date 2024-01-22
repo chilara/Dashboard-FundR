@@ -3,11 +3,11 @@
 import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { Box, Text, Flex, Input } from "@chakra-ui/react";
-import Chevrondown from "../../app/assets/chevrondown.svg";
-import Calendar from "../../app/assets/calendar.svg";
+import Chevrondown from "@/assets/chevrondown.svg";
+import Calendar from "@/assets/calendar.svg";
 import TablePagination from "@mui/material/TablePagination";
-import Upload from "../../app/assets/upload.svg";
-import ArrowLeft from "../../app/assets/arrowLeft.svg";
+import Upload from "@/assets/upload.svg";
+import ArrowLeft from "@/assets/arrowLeft.svg";
 
 const MobileTransactionComp = () => {
   const [usersList, setUsersList] = useState([]);
@@ -36,7 +36,7 @@ const MobileTransactionComp = () => {
   }, []);
 
   return (
-    <Box mt={"8rem"} px={"1rem"}>
+    <Box mt={"8rem"} px={"5px"} className="w-full">
       <Box
         display={"flex"}
         alignItems={"center"}

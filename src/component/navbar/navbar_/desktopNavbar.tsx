@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import Logo from "../../app/assets/Logo.svg";
-import Notification from "../../app/assets/notification.svg";
-import ArrowDown from "../../app/assets/arrowDown.svg";
+import Logo from "@/assets/Logo.svg";
+import Notification from "@/assets/notification.svg";
+import ArrowDown from "@/assets/arrowDown.svg";
 
 const NavbarComp = () => {
   return (

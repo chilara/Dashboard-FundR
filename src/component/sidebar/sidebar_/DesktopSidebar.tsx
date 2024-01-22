@@ -1,13 +1,13 @@
-import React from "react";
+import React, { ReactComponentElement, ReactNode } from "react";
 import "./style/style.css";
 import { usePathname } from "next/navigation";
 import { Box, Text } from "@chakra-ui/react";
-import GetStarted from "../../app/assets/getStarted.svg";
-import DbBlack from "../../app/assets/dbBlack.svg";
-import Wallet from "../../app/assets/wallet.svg";
-import Coins from "../../app/assets/coins.svg";
-import Document from "../../app/assets/document.svg";
-import Setting from "../../app/assets/setting.svg";
+import GetStarted from "@/assets/getStarted.svg";
+import DbBlack from "@/assets/dbBlack.svg";
+import Wallet from "@/assets/wallet.svg";
+import Coins from "@/assets/coins.svg";
+import Document from "@/assets/document.svg";
+import Setting from "@/assets/setting.svg";
 
 export const sidebarContent = [
   {
@@ -61,7 +61,7 @@ const DesktopSidebarComp = () => {
           (
             item: {
               link: string;
-              icon: string;
+              icon: any;
               content: string;
             },
             index: number

@@ -3,11 +3,7 @@ import { Box, Text } from "@chakra-ui/react";
 import TransactionIndex from "@/component/transactions_";
 
 const Transactions = () => {
-  return (
-    <Box>
-      <TransactionIndex />
-    </Box>
-  );
+  return <TransactionIndex />;
 };
 
 export default Transactions;

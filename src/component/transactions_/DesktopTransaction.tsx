@@ -2,11 +2,11 @@
 // import React from "react";
 import { useEffect, useState } from "react";
 import { Box, Text, Flex, Input } from "@chakra-ui/react";
-import Chevrondown from "../../app/assets/chevrondown.svg";
-import Calendar from "../../app/assets/calendar.svg";
-import Upload from "../../app/assets/upload.svg";
-import ArrowL from "../../app/assets/arrowL.svg";
-import ArrowR from "../../app/assets/arrowR.svg";
+import Chevrondown from "@/assets/chevrondown.svg";
+import Calendar from "@/assets/calendar.svg";
+import Upload from "@/assets/upload.svg";
+import ArrowL from "@/assets/arrowL.svg";
+import ArrowR from "@/assets/arrowR.svg";
 
 const DesktopTransactionComp = () => {
   const [loading, setLoading] = useState(false);
@@ -53,7 +53,7 @@ const DesktopTransactionComp = () => {
   }
 
   return (
-    <Box mt={"7rem"}>
+    <Box mt={"7rem"} width={1150}>
       <Box
         display={"flex"}
         alignItems={"center"}

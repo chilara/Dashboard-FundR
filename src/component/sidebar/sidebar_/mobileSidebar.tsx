@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { Box, Text } from "@chakra-ui/react";
-import getStarted from "../../app/assets/getStarted.svg";
-import dbBlack from "../../app/assets/dbBlack.svg";
-import wallet from "../../app/assets/wallet.svg";
-import coins from "../../app/assets/coins.svg";
-import document from "../../app/assets/document.svg";
-import setting from "../../app/assets/setting.svg";
+import getStarted from "@/assets/getStarted.svg";
+import dbBlack from "@/assets/dbBlack.svg";
+import wallet from "@/assets/wallet.svg";
+import coins from "@/assets/coins.svg";
+import document from "@/assets/document.svg";
+import setting from "@/assets/setting.svg";
 
 export const sidebarContent = [
   {

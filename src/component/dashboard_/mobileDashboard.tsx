@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { Box, Text, Flex } from "@chakra-ui/react";
-import Copy from "../../app/assets/copy.svg";
-import chevrondown from "../../app/assets/chevrondown.svg";
+import Copy from "@/assets/copy.svg";
 
 export const months = [
   {

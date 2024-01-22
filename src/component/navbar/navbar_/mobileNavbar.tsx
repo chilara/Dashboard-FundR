@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
-import Image from "next/image";
-import Logo from "../../app/assets/Logo.svg";
-import Notification from "../../app/assets/notification.svg";
-import Toggle from "../../app/assets/toggle.svg";
-import MobileSidebarComp from "../sidebar_/mobileSidebar";
+import Logo from "@/assets/Logo.svg";
+import Notification from "@/assets/notification.svg";
+import Toggle from "@/assets/toggle.svg";
 
 const MobileNavbarComp = () => {
   const [open, setOpen] = useState(false);

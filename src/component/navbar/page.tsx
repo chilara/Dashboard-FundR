@@ -1,5 +1,5 @@
-import NavbarIndex from "@/component/navbar_";
-import NavbarComp from "@/component/navbar_/desktopNavbar";
+import NavbarIndex from "@/component/navbar/navbar_";
+import NavbarComp from "@/component/navbar/navbar_/desktopNavbar";
 import { Box } from "@chakra-ui/react";
 import React from "react";
 
