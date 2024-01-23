@@ -339,66 +339,77 @@ const DesktopTransactionComp = () => {
           )
         )}
       </Box>
-
-      <Box display={"flex"} justifyContent={"flex-end"} gap={".5rem"}>
-        <button
-          style={{
-            width: "32px",
-            height: "32px",
-            border: "4px",
-            borderRadius: "1px solid #1F62FF",
-            backgroundColor: "#fff",
-            marginBottom: " 20rem",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            setPageNumber(pageNumber - 1);
-          }}
-          disabled={pageNumber === 1}
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <Text
+          color={"#696D8C"}
+          fontSize={"14px"}
+          fontWeight={400}
+          lineHeight={"22px"}
+          mt={0}
         >
-          <ArrowL />
-        </button>
+          Showing {pageNumber} of {numberOfPages} results
+        </Text>
 
-        {new Array(numberOfPages).fill("go").map((item, index) => (
+        <Box display={"flex"} justifyContent={"flex-end"} gap={".5rem"}>
           <button
-            key={index}
             style={{
-              backgroundColor: "#fff",
-              color: "#535379",
-              fontWeight: "400",
               width: "32px",
               height: "32px",
+              border: "4px",
+              borderRadius: "1px solid #1F62FF",
+              backgroundColor: "#fff",
+              marginBottom: " 20rem",
               cursor: "pointer",
-              border:
-                pageNumber === index + 1 ? "1px solid #1F62FF" : "#DADAE7",
-              borderRadius: "4px",
-              fontSize: "14px",
-              textAlign: "center",
             }}
             onClick={() => {
-              setPageNumber(index + 1);
+              setPageNumber(pageNumber - 1);
             }}
+            disabled={pageNumber === 1}
           >
-            {index + 1}
+            <ArrowL />
           </button>
-        ))}
-        <button
-          style={{
-            width: "32px",
-            height: "32px",
-            border: "4px",
-            borderRadius: "1px solid #1F62FF",
-            cursor: "pointer",
-            backgroundColor: "#fff",
-          }}
-          onClick={() => {
-            setPageNumber(pageNumber + 1);
-          }}
-          disabled={pageNumber === numberOfPages}
-        >
-          <ArrowR />
-        </button>
-      </Box>
+
+          {new Array(numberOfPages).fill("go").map((item, index) => (
+            <button
+              key={index}
+              style={{
+                backgroundColor: "#fff",
+                color: "#535379",
+                fontWeight: "400",
+                width: "32px",
+                height: "32px",
+                cursor: "pointer",
+                border:
+                  pageNumber === index + 1 ? "1px solid #1F62FF" : "#DADAE7",
+                borderRadius: "4px",
+                fontSize: "14px",
+                textAlign: "center",
+              }}
+              onClick={() => {
+                setPageNumber(index + 1);
+              }}
+            >
+              {index + 1}
+            </button>
+          ))}
+          <button
+            style={{
+              width: "32px",
+              height: "32px",
+              border: "4px",
+              borderRadius: "1px solid #1F62FF",
+              cursor: "pointer",
+              backgroundColor: "#fff",
+            }}
+            onClick={() => {
+              setPageNumber(pageNumber + 1);
+            }}
+            disabled={pageNumber === numberOfPages}
+          >
+            <ArrowR />
+          </button>
+        </Box>
+      </div>
     </Box>
   );
 };
